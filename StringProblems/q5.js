@@ -3,14 +3,24 @@
 
 let input = "hello world from javascript";
 
-function capitalizeTheFirstWord(input) {
-  let res = "";
+// function capitalizeTheFirstWord(input) {
+//   let res = "";
+//   let words = input.split(" ");
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     words += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+//   }
+//   return res;
+// }
+
+function capital(input) {
   let words = input.split(" ");
   for (let i = 0; i < words.length; i++) {
     let word = words[i];
-    res += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+    words[i] = word.charAt(0).toUpperCase() + word.slice(1);
   }
-  return res;
+  return words.join(" ");
 }
 
-console.log(capitalizeTheFirstWord(input));
+// console.log(capitalizeTheFirstWord(input));
+console.log(capital(input));
